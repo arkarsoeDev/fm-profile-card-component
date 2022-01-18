@@ -1,0 +1,16 @@
+{
+  "name": "profile-card-component-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass" : "sass --watch app/scss/main.scss:dist/css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-minify": "^2.0.0",
+    "sass": "^1.48.0"
+  }
+}
