@@ -1,0 +1,6 @@
+@use '../util' as *;
+.flex-container {
+    height: 98vh;
+    display: flex;
+    align-items: center;
+}

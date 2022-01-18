@@ -1,0 +1,118 @@
+@use '../util' as *;
+.card {
+    position: relative;
+    width: rem(280);
+    margin: 0 auto;
+    
+    @include breakpoint-up(medium) {
+        width: rem(300);
+    }
+    &__top{
+        z-index: -1;
+        position: absolute;
+        background-image: url('/images/bg-pattern-top.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: rem(800);
+        height: rem(800);
+        left: -225%;
+        top: -190%;
+    }
+
+    &__bottom{
+        z-index: -1;
+        position: absolute;
+        background-image: url('/images/bg-pattern-bottom.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: rem(800);
+        height: rem(800);
+        right: -225%;
+        bottom: -190%;
+    }
+
+    &__inner {
+        border-radius: rem(10);
+        overflow: hidden;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, .15);
+    }
+
+    &__upper{
+        width: 100%;
+        height: rem(100);
+        background-image: url('/images/bg-pattern-card.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__body{
+        background-color: $white;
+    }
+    &__profile {
+        position: relative;
+        height: rem(45);
+        margin-bottom: rem(20);
+    }
+    &__img{
+        position: absolute;
+        width: rem(90);
+        height: rem(90);
+        top: 0;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        background-image: url('/images/image-victor.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        border: 3px solid $white;
+        border-radius: 50%;
+    }
+    &__personal-info{
+        text-align: center;
+        margin-bottom: rem(10);
+    }
+
+    &__name{ 
+        display: inline;
+        font-weight: $font-bold;
+        color: $dark;
+        margin-right: rem(5);
+    }
+
+    &__age{ 
+        display: inline;
+        font-weight: $font-regular;
+    }
+
+    &__location{
+        text-align: center;
+        font-size: rem(13);
+        margin-bottom: rem(20);
+    }
+
+    &__social{
+        align-items: center;
+        border-top: 1px solid $darkLine;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding: 1.3rem 1.6rem;
+    }
+    
+    &__social-part{
+        flex: 1;
+        &__count{
+            display: block;
+            font-weight: $font-bold;
+            font-size: rem(16);
+            color: $dark;
+            letter-spacing: .8px;
+        }
+        &__label{
+            font-size: rem(10);
+            letter-spacing: 1.5px;
+        }
+    }
+}

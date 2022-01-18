@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass" : "sass --watch app/scss/main.scss:dist/css/main.css"
+    "compile:sass" : "sass --watch app/scss/style.scss:dist/css/style.css",
+    "mini:css" : "css-minify -d dist/css/ -o dist/css/"
   },
   "keywords": [],
   "author": "",
