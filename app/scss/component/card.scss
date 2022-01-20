@@ -7,7 +7,9 @@
     @include breakpoint-up(medium) {
         width: rem(300);
     }
-    &__top{
+    
+    &::before{
+        content: '';
         z-index: -1;
         position: absolute;
         background-image: url('/images/bg-pattern-top.svg');
@@ -20,7 +22,8 @@
         top: -190%;
     }
 
-    &__bottom{
+    &::after{
+        content: '';
         z-index: -1;
         position: absolute;
         background-image: url('/images/bg-pattern-bottom.svg');
@@ -77,6 +80,7 @@
     &__name{ 
         display: inline;
         font-weight: $font-bold;
+        font-size: rem(16);
         color: $dark;
         margin-right: rem(5);
     }

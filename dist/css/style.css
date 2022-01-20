@@ -33,7 +33,8 @@ body {
     width: 18.75rem;
   }
 }
-.card__top {
+.card::before {
+  content: "";
   z-index: -1;
   position: absolute;
   background-image: url("/images/bg-pattern-top.svg");
@@ -45,7 +46,8 @@ body {
   left: -225%;
   top: -190%;
 }
-.card__bottom {
+.card::after {
+  content: "";
   z-index: -1;
   position: absolute;
   background-image: url("/images/bg-pattern-bottom.svg");
@@ -99,6 +101,7 @@ body {
 .card__name {
   display: inline;
   font-weight: 700;
+  font-size: 1rem;
   color: black;
   margin-right: 0.3125rem;
 }
@@ -135,7 +138,6 @@ body {
 }
 
 .main {
-  position: relative;
   overflow: hidden;
 }
 
